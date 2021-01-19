@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Ольга Хлыстикова](https://up.htmlacademy.ru/htmlcss/30/user/994841).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Котов](https://htmlacademy.ru/profile/eugene_kotov).
 
 ---
 
