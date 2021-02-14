@@ -26,6 +26,9 @@
   --basic-black: #000000;
   --basic-white: #FFFFFF;  
   --basic-grey: #EEEEEE;
+  --basic-dark-grey: #DBDBDB;
+  --basic-grey-show: #DFDFDF;
+  --basic-grey-click: #D5D5D5;
 
   --basic-red: #FB565A;
   --basic-red-select: #E74246;
@@ -40,6 +43,8 @@
   --basic-yellow-click: #E5A722;
 
   --basic-text: #283136;
+
+  --basic-input: #4D4D4D;
 
   --basic-address: #666666;
   --basic-referal: #444444;
@@ -111,9 +116,6 @@ img{
 	line-height: 55px;
 }
 
-.features-text{
-
-}
 
 /* Services */
 .services-title{
@@ -122,10 +124,6 @@ img{
 	text-transform: uppercase;
 	font-size: 24px;
 	line-height: 30px;
-}
-
-.services-text{
-
 }
 
 
@@ -170,7 +168,7 @@ img{
 	font-size: 16px;
 	line-height: 18px;
 	text-transform: uppercase;
-	/* box-shadow: none; */
+	border: none;
 }
 .button:hover{
 	background-color: var(--basic-red-select);
@@ -202,6 +200,23 @@ img{
 	background-color: var(--basic-yellow-click);
 }
 
+/* кнопка на странице каталога "показать" */
+.button-show{
+	background-color: var(--basic-grey);
+	color: var(--basic-black);
+	font-size: 16px;
+	line-height: 18px;
+	text-transform: uppercase;
+	border: none;
+}
+
+.button-show:hover{
+	background-color: var(--basic-grey-show);
+}
+
+.button-show:active{
+	background-color: var(--basic-grey-click);
+}
 
 /* Partners */
 .partners-item{
@@ -213,6 +228,155 @@ img{
 .partners-item:active{
 	opacity: .1;
 }
+
+
+
+/* КАТАЛОГ */
+
+.catalog-title{
+	font-weight: 500;
+	font-size: 55px;
+	line-height: 55px;
+	color: var(--basic-black);
+	background-color: var(--basic-grey);
+}
+
+.price-title,
+.property-title,
+.sorting-title,
+.grid-title{
+	font-family: "Roboto-Bold",Arial, sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+	color: var(--basic-black);
+	text-transform: uppercase;
+}
+
+.grid-item,
+.property-item{
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.grid-list,
+.property-list{
+	list-style: none;
+}
+
+.grid-item-input,
+.property-item-input{
+	color: var(basic-input);
+	opacity: .4;	
+}
+
+.grid-item-input,
+.property-item-input:hover{
+	opacity: 1;
+}
+/*
+.grid-item-input,
+.property-item-input:disabled{
+	opacity: .1;
+}
+
+.property-item label:disabled{
+	opacity: .3;
+}
+.grid-item label:disabled{
+	opacity: .3;
+}*/
+
+.price-range{
+	font-size: 16px;
+	line-height: 22px;
+	text-transform: uppercase;
+}
+
+.sorting-list{
+	list-style: none;
+}
+
+.sorting-item{
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--basic-black);
+	opacity: .3;
+	text-transform: uppercase;
+}
+
+.sorting-item:hover{
+	opacity: .6;
+}
+.sorting-item:active{
+	opacity: 1;
+}
+
+.sorting-button{
+	opacity: .2;
+}
+.sorting-button:hover{
+	opacity: 1;
+}
+/* как заменить цвет треугольника при нажатии на него.
+	 или заменить сам файл картинки*/
+
+/* каталог шаблонов */
+.catalog-list{
+	list-style: none;
+}
+.catalog-img-top{
+	opacity: .12;	
+}
+.catalog-img-top:hover{
+	opacity: 1;	
+}
+
+.catalog-item-info{
+	background-color: var(--basic-grey);
+}
+.catalog-item-name{
+	font-family: "Roboto-Bold",Arial, sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--basic-black);
+}
+.catalog-item-name:hover{
+	color: var(--basic-red);
+}
+.catalog-item-name:active{
+	color: var(--basic-black);
+	opacity: .3;
+}
+
+.catalog-item-price{
+	color: var(--basic-white);
+	background-color: var(--basic-red);
+}
+.catalog-item-price:hover{
+	background-color: var(--basic-red-select);
+}
+.catalog-item-price:active{
+	background-color: var(--basic-red-click);
+}
+
+/* pagination */
+.pagination-list{
+	list-style: none;
+}
+.pagination-item{
+	background-color: var(--basic-grey);
+	color: var(--basic-black);
+	text-transform: uppercase;
+}
+
+.pagination-item:hover,
+.pagination-item:focus,
+.pagination-item:active {
+  background-color: var(--basic-white);
+  border: 3px solid var(--basic-dark-grey);
+}
+
 
 /* Footer */
 /*блок с адресом*/

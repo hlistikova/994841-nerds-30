@@ -1,49 +1,92 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Нёрдс</title>
+	<meta charset="UTF-8">
+	<title>Нёрдс</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body>
-	<header>
-		<nav>
-			<a>	
-			<img src="https://via.placeholder.com/150x100" width="150" height="100" alt="логотин студии Нёрдс">
+<body class="main-body">
+	<header class="main-header">
+		<nav class="main-navigation">
+			<a class="main-header-logo" href="index.html">	
+			<img src="img/nerds-logo.svg" width="159.87" height="65.02" alt="логотин студии Нёрдс">
 			</a>
-			<ul>
-				<li><a href="blank.html">Студия</a></li>
-				<li><a href="blank.html">Клиенты</a></li>
-				<li><a href="catalog.html">Магазин</a></li>
-				<li><a href="blank.html">Контакты</a></li>
-			</ul>
-			<a href="blank.html">Корзина</a>
+				<ul class="site-navigation">
+					<li class="navigation-item"><a href="blank.html">Студия</a></li>
+					<li class="navigation-item"><a href="blank.html">Клиенты</a></li>
+					<li class="navigation-item"><a href="catalog.html">Магазин</a></li>
+					<li class="navigation-item"><a href="blank.html">Контакты</a></li>
+				</ul>
+			<div class="cart">
+			<a class="cart-link" href="blank.html">	
+				<img class="cart-img" src="img/cart-icon.svg" width="15" height="15" alt="знак корзины">Корзина
+			</a>
+			</div>
 		</nav>		
 	</header>
+
 	<main>
-		<h1>Студия Нёрдс</h1>
-		<section>
-			<h2>Баннеры</h2>
+		<p>BLANK</p>
+	</main>
+
+	<footer class="main-footer">
+
+		<section class="footer-contacts">
+			<div class="contacts-map">
+				<img class="contacts-marker" src="img/map-marker.png" width="231" height="190" alt="указатель на карте">
+				<!-- здесь будет карта -->
+			</div>
+			<div class="contacts">
+				<h2>Контакты</h2>
+				<p class="contacts-name">NЁRDS DESIGN STUDIO</p>
+				<p class="contacts-address">191186, Санкт-Петербург,  <br>
+											ул. Б. Конюшенная, д. 19/8   </p><br>
+				<a class="contacts-phone" href="tel: +78122757575">+7 (812) 275-75-75</a><br>
+				<a class="button" href="blank.html">Напишите нам</a>
+			</div>
 		</section>
-		<p>БЛАНК HTML</p>
-		</main>
-	<footer>
-		<section>
-			<h2>Контакты</h2>
-			<p>NЁRDS DESIGN STUDIO</p>
-			<p>191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8  тел. +7 (812) 275-75-75</p>
-			<a href="blank.html">Напишите нам</a>
-		</section>
-		<section>
-			<ul>
-				<li><a href="#">Вконтакте</a></li>
-				<li><a href="#">Фейсбук</a></li>
-				<li><a href="#">Инстаграм</a></li>
+
+		<section class="footer-social">
+			<ul class="social-list">
+				<li class="social-item"><a href="blank.html"><img src="img/vk-icon.svg" width="26.01" height="15" alt="Вконтакте">вк</a></li>
+				<li class="social-item"><a href="blank.html"><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук">фб</a></li>
+				<li class="social-item"><a href="blank.html"><img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм">инст</a></li>
+				
 			</ul>
-			<h2>Давайте дружить!</h2>
-			<p>Скидка 10% для друзей из социальных сетей.</p>
+			<div class="footer-referal">
+				<h2 class="referal-title">Давайте дружить, это выгодно!</h2>
+				<p class="referal-text">Скидка 10% для друзей из социальных сетей.</p>
+			</div>
 		</section>
 	</footer>
+
+	<section class="modal">
+		<h2 class="modal-title">Напишите нам</h2>
+
+		<form class="order" action="https://echo.htmlacademy.ru" method="post">
+			<p>
+      			<label class="order-login" for="name-id">Ваше имя:</label>
+      			<input id="name-id" type="text" name="name" placeholder="Имя Фамилия">
+      		</p>
+      		<p>
+      			<label class="order-email" for="e-mail-id">Ваш e-mail:</label>
+      			<input id="e-mail-id" type="e-mail" name="e-mail" placeholder="email@example.com">
+      		</p>
+      		<p>
+      			<label class="order-text" for="text-id">Текст письма:</label>
+      			<textarea id="text-id" type="text" name="text" placeholder="В свободной форме"></textarea>
+      		</p>	
+      		<button class="button" type="submit">Отправить</button>
+
+      	</form>
+      	<button class="modal-close" type="button"><img src="img/close.png"></button>
+	</section>
 	
 </body>
 </html>
