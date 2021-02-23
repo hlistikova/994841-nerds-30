@@ -48,6 +48,7 @@
 
   --basic-address: #666666;
   --basic-referal: #444444;
+  --basic-social: #E1E1E1;
 }
 /* Global */
 
@@ -56,6 +57,12 @@ body{
 	font-size: 16px;
 	line-height: 24px;
 	color: var(--basic-text);
+
+
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	align-content: start;
 }
 
 a{
@@ -68,6 +75,18 @@ img{
 	height: auto;
 }
 
+/*Grid*/
+.page{
+	height: 100%;
+}
+
+/* Main header */
+.main-header {
+  margin-bottom: 0;
+}
+
+
+
 /* Main navigation */
 .main-navigation{ 
 	font-size: 16px;
@@ -76,12 +95,48 @@ img{
 	text-transform: uppercase;
 	color: var(--basic-black);
 	background-color: var(--basic-grey);
+	display: grid;
 }  
-.site-navigation{
-	list-style: none;
+
+.main-header-logo{
 }
 
+.main-header-logo img:hover{
+	opacity: .7;
+}
+.main-header-logo img:active{
+	opacity: .3;
+}
+
+.main-navigation-wrapper{
+	display: grid;
+	grid-template-columns: 159.87px 1fr min-content;
+  	background-color: var(--basic-grey); 
+  	margin: 0 auto;
+  	width: 1157px;
+
+}
+
+.main-navigation-bar{
+  	background-color: var(--basic-grey); 
+  		
+}
+
+.site-navigation{
+	list-style: none;
+
+	margin: 0;
+    padding: 0;
+}
+
+
+
+
 /* User navigation */
+.cart{
+
+}
+
 .site-navigation a,
 .cart a{
 	color: var(--basic-black);
@@ -98,11 +153,11 @@ img{
 	opacity: .3; 
 }
 
-.main-header-logo img:hover{
-	opacity: .7;
-}
-.main-header-logo img:active{
-	opacity: .3;
+/*Container*/
+.container{
+	margin: 0 auto;
+  	width: 1157px;
+
 }
 
 /* Features*/
@@ -115,20 +170,52 @@ img{
 	font-size: 55px;
 	line-height: 55px;
 }
+.features-img{
+	/*	float: right; */
+}
 
 
 /* Services */
+.services{
+	
+}
+
+.services-list{
+	display: grid;	
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 100px;
+}
+
 .services-title{
 	font-family: "Roboto-Bold", Arial, sans-serif;
 	color: var(--basic-black);
 	text-transform: uppercase;
 	font-size: 24px;
 	line-height: 30px;
+	margin-bottom: 25px;
+	 
 }
-
+.services-item{
+	font-size: 16px;
+	vertical-align: bottom;
+}
+/*
+.services-text{
+	font-size: 16px;
+	line-height: 24px;
+}
+*/
 
 /* About */
+.about-wrapper{
+	display: grid;
+	grid-template-columns: 1fr 360px;
+	margin-bottom: 80px;
+}
 /* левый блок*/
+.about-left{
+
+}
 .about-slogan{
 	color: var(--basic-black);
 	font-size: 45px;
@@ -140,6 +227,10 @@ img{
 	text-transform: uppercase;
 }
 /* правый блок*/
+.about-right {
+ 
+}
+
 .about-right-text{
 	font-family: "Roboto-Bold", Arial, sans-serif;
 	text-transform: uppercase;
@@ -219,8 +310,13 @@ img{
 }
 
 /* Partners */
+.partners-list{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 .partners-item{
 	opacity: .2;
+	margin: auto;
 } 
 .partners-item:hover{
 	opacity: 1;
@@ -229,16 +325,55 @@ img{
 	opacity: .1;
 }
 
+.academy{
 
+}
+.barbershop{
+
+}
+.pink{
+
+}
+.mishka{
+
+}
 
 /* КАТАЛОГ */
 
+.page-catalog{
+ 	outline: 5px solid rgba(255, 0, 0, 0.7);
+	outline-offset: -5px;
+	display: grid;
+	grid-template-columns: 400px 1fr;
+
+}
+.page-catalog .catalog-title {
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+}
+
 .catalog-title{
+	background-color: var(--basic-grey);
 	font-weight: 500;
 	font-size: 55px;
 	line-height: 55px;
 	color: var(--basic-black);
+	width: 1157px;
+	margin: 0 auto;
+}
+.catalog-title-wrapper{
 	background-color: var(--basic-grey);
+}
+
+.filters {
+  outline: 5px solid rgba(255, 0, 255, 0.7);
+  outline-offset: -5px;
+}
+
+.sorting{
+outline: 5px solid rgba(255, 0, 255, 0.7);
+  outline-offset: -5px;	
+
 }
 
 .price-title,
@@ -321,6 +456,25 @@ img{
 	 или заменить сам файл картинки*/
 
 /* каталог шаблонов */
+.catalog-title-wrapper{
+	background-color: var(--basic-grey);
+	padding-bottom: 55px;	
+}
+
+.catalog-title{
+ 	margin: 0 auto;
+ 	width: 1157px;
+	text-align: center;
+}
+
+.catalog{
+  outline: 5px solid rgba(0, 255, 255, 0.7);
+  outline-offset: -5px;
+  grid-column: 2 / -1;
+  margin-left: 141px;
+}
+
+
 .catalog-list{
 	list-style: none;
 }
@@ -379,6 +533,18 @@ img{
 
 
 /* Footer */
+.main-footer{
+  margin-bottom: 0;
+  margin-top: 80px
+}
+.map{
+	width: 100%;
+}
+/*
+.contacts-marker{
+	z-index: 1;
+}
+*/
 /*блок с адресом*/
 .contacts-name{
 	font-family: "Roboto-Bold",Arial, sans-serif;
@@ -398,23 +564,42 @@ img{
 
 /* Socials */
 
-/*соц сети*/
 .footer-social{
-
+	display: grid;
+	grid-template-columns: 400px 1fr;	
+	height: 217px;
 }
+
 .social-list{
 	list-style: none;
+	background-color: var(--basic-social);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 9px;
+	margin: 0;
 }
+
+.social-item{
+	margin: auto;
+}
+
 /*давайте дружить*/
+ .footer-referal{
+ 	margin: auto auto auto 0;
+ }
+
 .referal-title{
 	font-family: "Roboto-Bold", Arial, sans-serif;
 	font-size: 36px;
 	line-height: 36px;
 	color: var(--basic-black);
+	margin-bottom: 10px;
+
 }
 .referal-text{
 	color: var(--basic-referal);
 	line-height: 22px;
+	font-size: 16px;
 }
 
 /* Modal */

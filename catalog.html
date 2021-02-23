@@ -12,8 +12,11 @@
 </head>
 
 <body class="main-body">
+
 	<header class="main-header">
 		<nav class="main-navigation">
+			<div class="main-header-bar">
+			<div class="main-navigation-wrapper">
 			<a class="main-header-logo" href="index.html">	
 			<img src="img/nerds-logo.svg" width="159.87" height="65.02" alt="логотин студии Нёрдс">
 			</a>
@@ -23,18 +26,24 @@
 					<li class="navigation-item"><a href="catalog.html">Магазин</a></li>
 					<li class="navigation-item"><a href="blank.html">Контакты</a></li>
 				</ul>
+			
+
 			<div class="cart">
 			<a class="cart-link" href="blank.html">	
 				<img class="cart-img" src="img/cart-icon.svg" width="15" height="15" alt="знак корзины">Корзина
 			</a>
 			</div>
+			</div>
+			</div>
 		</nav>		
 	</header>
 
-	<main class="page-catalog-container">
-		<h1 class="catalog-title">Магазин готовых шаблонов</h1>
-
-		<section class="filters">
+	<main class="main-catalog ">
+		
+		<div class="catalog-title-wrapper"><h1 class="catalog-title">Магазин готовых шаблонов</h1></div>
+		
+		<div class="page-catalog container">
+		<section class="filters ">
 			<h2>Фильтр</h2>
 			 <div class="price">
 			 	<h2 class="price-title">Стоимость</h2>
@@ -54,11 +63,11 @@
         				<ul class="grid-list">
         					<li class="grid-item">
         						<input class="grid-item-input" type="radio" name="setka-group" value="adaptive" id="filter-adaptive" checked>
-            					<label for="filter-adaptive">Адаптивная  </label>
+            					<label for="filter-adaptive">Адаптивная</label>
         					</li>
         					<li class="grid-item">
         						<input class="grid-item-input" type="radio" name="setka-group" value="fixed" id="filter-fixed">
-            					<label for="filter-fixed">Фиксированная  </label>
+            					<label for="filter-fixed">Фиксированная</label>
         					</li>
         					<li class="grid-item">
         						<input class="grid-item-input" type="radio" name="setka-group" value="rubber" id="filter-rubber">
@@ -97,9 +106,9 @@
     		</form>			
 		</section>	
 
-		<section class="sorting">
+		<section class="sorting ">
 			<h2>Сортировка</h2>
-			<p class="sorting-title">Сортировать</p> 
+			<p class="sorting-title">Сортирова</p> 
 				<ul class="sorting-list">
 					<li class="sorting-item">По цене</li>
 					<li class="sorting-item">По типу</li>
@@ -109,7 +118,8 @@
 				<button class="sorting-button" type="submit"><img src="img/icon-up.svg" width="11" height="10" alt="вниз"></button>
 		</section>
 
-		<section class="catalog">
+
+		<section class="catalog ">
 			<h2>Список шаблонов</h2>
 			<ul class="catalog-list">
 				<li class="catalog-item">
@@ -186,6 +196,7 @@
 				</ul>
 			</div>
 		</section>
+	</div>
 	</main>
 
 	<footer class="main-footer">
@@ -193,7 +204,7 @@
 		<section class="footer-contacts">
 			<div class="contacts-map">
 				<img class="contacts-marker" src="img/map-marker.png" width="231" height="190" alt="указатель на карте">
-				<!-- здесь будет карта -->
+				<img class="map" src="img/map.jpg">
 			</div>
 			<div class="contacts">
 				<h2>Контакты</h2>
@@ -205,11 +216,11 @@
 			</div>
 		</section>
 
-		<section class="footer-social">
+		<section class="footer-social container">
 			<ul class="social-list">
-				<li class="social-item"><a href="blank.html"><img src="img/vk-icon.svg" width="26.01" height="15" alt="Вконтакте">вк</a></li>
-				<li class="social-item"><a href="blank.html"><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук">фб</a></li>
-				<li class="social-item"><a href="blank.html"><img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм">инст</a></li>
+				<li class="social-item"><a href="blank.html"><img src="img/vk-icon.svg" width="26.01" height="15" alt="Вконтакте"></a></li>
+				<li class="social-item"><a href="blank.html"><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук"></a></li>
+				<li class="social-item"><a href="blank.html"><img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм"></a></li>
 				
 			</ul>
 			<div class="footer-referal">
@@ -218,7 +229,7 @@
 			</div>
 		</section>
 	</footer>
-
+	
 	<section class="modal">
 		<h2 class="modal-title">Напишите нам</h2>
 
@@ -240,6 +251,7 @@
       	</form>
       	<button class="modal-close" type="button"><img src="img/close.png"></button>
 	</section>
+
 	
 </body>
 </html>
