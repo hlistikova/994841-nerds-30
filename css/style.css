@@ -60,6 +60,7 @@ body{
 
 
 	min-height: 100%;
+
 	display: grid;
 	grid-template-rows: min-content 1fr min-content;
 	align-content: start;
@@ -86,10 +87,8 @@ img{
 
 /* Main header */
 .main-header {
-  margin-bottom: 0;
+
 }
-
-
 
 /* Main navigation */
 .main-navigation{ 
@@ -99,11 +98,17 @@ img{
 	text-transform: uppercase;
 	color: var(--basic-black);
 	background-color: var(--basic-grey);
-	display: grid;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding-top: 50px;
 }  
 
 .main-header-logo{
-	margin-top: 48.98px;
+	width: 160px;
+	height: 66px;
 }
 
 .main-header-logo img:hover{
@@ -114,36 +119,44 @@ img{
 }
 
 .main-navigation-wrapper{
-	display: grid;
-	grid-template-columns: 159.87px 1fr min-content;
+	
   	background-color: var(--basic-grey); 
-  	margin: 0 auto;
-  	width: 1157px;
+  	width: 1160px;
+  	display: flex;
+  	justify-content: space-between;
+	align-items: center;
 }
 
 .main-navigation-bar{
   	background-color: var(--basic-grey); 
-  		
 }
 
 .site-navigation{
 	list-style: none;
-	margin:0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
-
+.navigation-item{
+	margin-right: 45px;
+}
 
 
 
 /* User navigation */
 .cart{
-
+	max-width: 115px;
 }
-
+.cart-img{
+	margin-right: 15px;
+}
+/*
 .site-navigation a,
 .cart a{
 	color: var(--basic-black);
-}
+}*/
 
 .site-navigation a:hover, 
 .cart a:hover{
@@ -166,7 +179,14 @@ img{
 /* Features*/
 .features{
 	background-color: var(--basic-grey);
+
 }
+
+.features-item{
+	margin: 0 auto;
+  	width: 1160px;
+}
+
 .features-slogan{
 	color: var(--basic-black);
 	font-weight: 500;
@@ -174,19 +194,20 @@ img{
 	line-height: 55px;
 }
 .features-img{
-	/*	float: right; */
 }
 
 
 /* Services */
 .services{
+	 margin-bottom: 80px;
+	 margin-top: 80px;
 	
 }
 
 .services-list{
-	display: grid;	
-	grid-template-columns: 1fr 1fr 1fr;
-	column-gap: 100px;
+	display: flex;
+	justify-content: space-between;
+	/* у третьего блока "презентации" нет отступа справа, в гридах был */
 }
 
 .services-title{
@@ -201,6 +222,7 @@ img{
 .services-item{
 	font-size: 16px;
 	vertical-align: bottom;
+	width: 300px;
 }
 /*
 .services-text{
@@ -211,13 +233,18 @@ img{
 
 /* About */
 .about-wrapper{
+	/*
 	display: grid;
 	grid-template-columns: 1fr 360px;
-	margin-bottom: 80px;
-}
+	margin-bottom: 80px;*/
+
+	display: flex;
+	justify-content: space-between;
+	}
+
 /* левый блок*/
 .about-left{
-
+	width: 650px;
 }
 .about-slogan{
 	color: var(--basic-black);
@@ -229,9 +256,29 @@ img{
 	font-family: "Roboto-Bold", Arial, sans-serif;
 	text-transform: uppercase;
 }
+.about-list{
+	list-style: none;	
+}
+.about-item{
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	vertical-align: center;
+}
+
+.about-item:before {
+	content: url(../img/marker-list.png); 
+}
+
 /* правый блок*/
 .about-right {
- 
+	width: 360px;
+	height: 411px;
+}
+.about-logo{
+	width: 360px;
+	height: 208px;
+
 }
 
 .about-right-text{
@@ -360,16 +407,18 @@ img{
 	font-size: 55px;
 	line-height: 55px;
 	color: var(--basic-black);
-	width: 1157px;
-	margin: 0 auto 55px;
+	width: 1160px;
+	margin: 0 auto;
+	text-align: center;
 }
+
 .catalog-title-wrapper{
 	background-color: var(--basic-grey);
+	padding-top: 80px;
+	padding-bottom: 108px;
 }
 
-.filters {
 
-}
 
 .sorting{
 
@@ -427,9 +476,22 @@ img{
 	text-transform: uppercase;
 }
 
+.price-range-num{
+	background-color: var(--basic-grey);
+	border-radius: 3px;
+	text-align: center;
+	width: 80px;
+	height: 38px;
+}
+.sorting{
+	display: flex;
+
+}
 .sorting-list{
 	list-style: none;
 	padding: 0;
+	display: flex;
+
 }
 
 .sorting-item{
@@ -456,17 +518,23 @@ img{
 /* как заменить цвет треугольника при нажатии на него.
 	 или заменить сам файл картинки*/
 
-/* каталог шаблонов */
-.catalog-title-wrapper{
-	background-color: var(--basic-grey);
-	padding-bottom: 55px;	
+.filters{
+	width: 208px;
 }
 
-.catalog-title{
- 	margin: 0 auto;
- 	width: 1160px;
-	text-align: center;
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 47px;
+  border: none;
 }
+
+.filter li{
+	margin-bottom: 20px;
+}
+/* каталог шаблонов */
+
+
 
 .catalog{
 
@@ -492,6 +560,7 @@ img{
 
 .catalog-item{
 	width: 360px;
+	padding: 0;
 /*	height: 620px; */	
 }
 
@@ -567,6 +636,11 @@ img{
 }
 */
 /*блок с адресом*/
+.contacts{
+	width: 320px;
+	height: 140px;
+}
+
 .contacts-name{
 	font-family: "Roboto-Bold",Arial, sans-serif;
 	font-size: 18px;
