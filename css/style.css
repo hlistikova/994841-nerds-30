@@ -169,6 +169,14 @@ img{
 	opacity: .3; 
 }
 
+/*подчеркивание активного пункта меню ???*/
+.selected{
+	padding-bottom: 12px;
+	border-bottom: solid 2px var(--basic-red);
+}
+
+
+
 /*Container*/
 .container{
 	margin: 0 auto;
@@ -180,11 +188,17 @@ img{
 .features{
 	background-color: var(--basic-grey);
 
+
 }
 
 .features-item{
-	margin: 0 auto;
-  	width: 1160px;
+	height: 431px;
+ 	width: 1160px;
+	position: relative;
+		margin: 0 auto;
+
+
+ 
 }
 
 .features-slogan{
@@ -192,10 +206,17 @@ img{
 	font-weight: 500;
 	font-size: 55px;
 	line-height: 55px;
+	padding-top: 78px;
 }
 .features-img{
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
+.features-button{
 
+
+}
 
 /* Services */
 .services{
@@ -310,6 +331,7 @@ img{
 	line-height: 18px;
 	text-transform: uppercase;
 	border: none;
+	height: 50px;
 }
 .button:hover{
 	background-color: var(--basic-red-select);
@@ -418,13 +440,6 @@ img{
 	padding-bottom: 108px;
 }
 
-
-
-.sorting{
-
-
-}
-
 .price-title,
 .property-title,
 .sorting-title,
@@ -485,13 +500,15 @@ img{
 }
 .sorting{
 	display: flex;
-
+	justify-content: space-between;
+	align-items: center;
 }
 .sorting-list{
 	list-style: none;
 	padding: 0;
 	display: flex;
-
+	justify-content: space-between; 
+	width: 272px;
 }
 
 .sorting-item{
@@ -510,6 +527,8 @@ img{
 }
 
 .sorting-button{
+	margin: 0;
+	padding: 0;
 	opacity: .2;
 }
 .sorting-button:hover{
@@ -638,7 +657,8 @@ img{
 /*блок с адресом*/
 .contacts{
 	width: 320px;
-	height: 140px;
+	height: 308px;
+	padding-left: 50px;
 }
 
 .contacts-name{
@@ -707,6 +727,10 @@ img{
 }
 
 /* Modal */
+.modal{
+	width: 960px;
+	height: 590px;
+}
 .modal-title{
 	font-family: "Roboto-Bold", Arial, sans-serif;
 	font-size: 45px;
