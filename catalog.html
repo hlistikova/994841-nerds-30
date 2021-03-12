@@ -56,7 +56,7 @@
 			 </div> -->
 
       		<form class="filter" method="get" action="https://echo.htmlacademy.ru">
-      			<fieldset class="filter-item">
+      			<fieldset class="filter-item pr">
       				<legend class="price-title">Стоимость:</legend>
       				<div class="price-filter">
       					<div class="range-controls">
@@ -79,7 +79,7 @@
       					</div>	
       				</div>
       			</fieldset>
-      			<fieldset class="filter-item">
+      			<fieldset class="filter-item grid">
         			<legend class="grid-title">Сетка:</legend>
         				<ul class="grid-list">
         					<li class="grid-item">
@@ -97,7 +97,7 @@
         				</ul>
      			 </fieldset>
 
-     			 <fieldset class="filter-item">
+     			 <fieldset class="filter-item property">
         			<legend class="property-title">Особенности:</legend>
         				<ul class="property-list">
         					<li class="property-item">        						
@@ -133,7 +133,7 @@
 
 			<section class="sorting">
 			<h2 class="hide">Сортировка</h2>
-			<p class="sorting-title">Сортировка</p> 
+			<p class="sorting-title">Сортировать:</p> 
 				<ul class="sorting-list">
 					<li class="sorting-item">По цене</li>
 					<li class="sorting-item">По типу</li>
@@ -154,7 +154,7 @@
 					<img class="catalog-img-top" src="img/catalog-top.svg" alt="браузер">
 					<img class="catalog-img" src="img/sedona.jpg" width="358" height="578" alt="Седона">
 					<div class="catalog-item-info">
-						<a class="catalog-item-name" href="blank.html">Седона</a>
+						<a class="catalog-item-name" href="blank.html">Sedona</a>
 						<div>Информационный сайт<br>для туристов</div>
 						<a class="catalog-item-price button" href="blank.html">9 900 &#8381;</a>						
 					</div>
@@ -231,16 +231,17 @@
 
 		<section class="footer-contacts">
 			<div class="contacts-map">
-				<img class="contacts-marker" src="img/map-marker.png" width="231" height="190" alt="указатель на карте">
-				<img class="map" src="img/map.jpg" width="1440" height="416">
-			
-			<div class="contacts">
+							<iframe class="map-widget" src="https://yandex.ru/map-widget/v1/-/CCQxf0T2OD" allowfullscreen="true"></iframe>
+			<div class="contacts-wrapper">				
+			<div class="contacts container">
 				<h2 class="hide">Контакты</h2>
 				<div class="contacts-name">NЁRDS DESIGN STUDIO</div>
-				<div class="contacts-address">191186, Санкт-Петербург,  <br>
-											ул. Б. Конюшенная, д. 19/8   <br><br>
-				<a class="contacts-phone" href="tel: +78122757575">+7 (812) 275-75-75</a></div>
+				<div class="contacts-address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br><br>
+				<a class="contacts-phone" href="tel: +78122757575">тел. +7 (812) 275-75-75</a></div>
 				<a class="button" href="blank.html">Напишите нам</a>
+			</div>
+
+				<img class="contacts-marker" src="img/map-marker.png" width="231" height="190" alt="указатель на карте">
 			</div>
 			</div>
 		</section>
