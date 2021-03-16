@@ -141,16 +141,12 @@ img{
 }
 
 .main-navigation-wrapper{	
-  	background-color: var(--basic-grey); 
+	background-color: var(--basic-grey); 
   	width: 1160px;
   	display: flex;
   	justify-content: space-between;
 	align-items: center;
 }
-
-/*.main-navigation-bar{
-  	background-color: var(--basic-grey); 
-}*/
 
 .site-navigation{
 	list-style: none;
@@ -163,6 +159,12 @@ img{
 }
 .navigation-item{
 	margin-right: 45px;
+}
+
+.navigation-item a{
+	height: 50px;
+	line-height: 50px;
+	display: inline-block;
 }
 
 .site-navigation , .cart{
@@ -190,13 +192,10 @@ img{
 }
 
 /*подчеркивание активного пункта меню*/
-.selected{
+.active{
 	border-bottom: solid 2px var(--basic-red);
 }
 
-.site-item .selected{
-	padding-bottom: 13px;
-}
 
 /*Container*/
 .container{
@@ -212,16 +211,12 @@ img{
 }
 
 .features-list{	
-
 	width: 1160px;
 	margin: 0 auto;
 }
 .features-item{
-	height: 429px;/*
-	width: 1160px;
-	margin: 0 auto;*/
+	height: 429px;
 	position: relative;
-
 	background-position: top right;
 	background-repeat: no-repeat;
 }
@@ -587,7 +582,7 @@ img{
 	background-color: var(--basic-grey);
 	padding-top: 77px;
 	padding-bottom: 108px;
-	margin-bottom: 54px;
+	margin-bottom: 53px;
 }
 
 .page-catalog{
@@ -606,7 +601,6 @@ img{
 /* фильтр цена */
 
 .price-filter {
-  	/*width: 260px;*/
 	margin-top: 48px;
 	margin-bottom: 52px;
 }
@@ -687,6 +681,7 @@ img{
 }
 
 /*заголовки фильтров*/
+
 .price-title,
 .property-title,
 .sorting-title,
@@ -737,6 +732,11 @@ img{
 
 .filter li{
 	margin-bottom: 20px;
+}
+
+input:focus + label{
+	border: 2px solid blue;
+	border-radius: 2px;
 }
 
 /* ЧЕКБОКС ОСОБЕННОСТИ */
@@ -891,6 +891,9 @@ img{
 }
 
 .catalog-img-top{
+	width: 360px;
+	height: 40px;
+	background-image: url(../img/catalog-top.svg);
 	opacity: .12;	
 }
 
