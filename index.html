@@ -60,13 +60,15 @@
 				<div class="features-text">Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается.</div>
 				<a class="button features-button" href="blank.html">Узнать больше</a>
 			</div>	
+
+			<div class="slider-controls">
+				<button type="button" aria-label="Первый слайд"></button>
+				<button  class="current" type="button" aria-label="Второй слайд"></button>
+				<button type="button" aria-label="Третий слайд"></button>
+			</div>	
 		</div>	
 
-		<div class="slider-controls">
-			<button type="button" aria-label="Первый слайд"></button>
-			<button  class="current" type="button" aria-label="Второй слайд"></button>
-			<button type="button" aria-label="Третий слайд"></button>
-		</div>	
+		
 	</section>
 	
 	<div  class="container">
@@ -214,6 +216,30 @@
 			</div>
 		</section>
 	</footer>
+
+	<section class="modal hide">
+		<h2 class="modal-title">Напишите нам</h2>
+		<div class="modal-wrapper">
+		<form class="order" action="https://echo.htmlacademy.ru" method="post">
+			<p class="order-item">
+      			<label class="order-login" for="name-id">Ваше имя:</label>
+      			<input id="name-id" type="text" name="name" placeholder="Имя Фамилия" required autofocus>
+      		</p>
+      		<p class="order-item">
+      			<label class="order-email" for="e-mail-id">Ваш e-mail:</label>
+      			<input id="e-mail-id" type="email" name="e-mail" placeholder="email@example.com" required>
+      		</p>
+      		<p class="order-item">
+      			<label class="order-text" for="text-id">Текст письма:</label>
+      			<textarea id="text-id" name="text" placeholder="В свободной форме" required></textarea>
+      		</p>
+
+      	<button class="button button-send" type="submit">Отправить</button>
+      	</form>
+
+      	<button class="modal-close" type="button"></button>
+		</div>
+	</section>
 
 </body>
 </html>

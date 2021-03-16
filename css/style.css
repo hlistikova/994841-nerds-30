@@ -30,6 +30,7 @@
   --basic-grey-show: #DFDFDF;
   --basic-grey-click: #D5D5D5;
   --basic-grey-slide: #C1C1C1;
+  --basic-grey-sort: #231F20;
 
   --basic-red: #FB565A;
   --basic-red-select: #E74246;
@@ -139,15 +140,12 @@ img{
 	opacity: .3;
 }
 
-.main-navigation-wrapper{
-	
+.main-navigation-wrapper{	
   	background-color: var(--basic-grey); 
   	width: 1160px;
   	display: flex;
   	justify-content: space-between;
 	align-items: center;
-
-	/*padding-bottom: 12px;*/
 }
 
 .main-navigation-bar{
@@ -161,7 +159,7 @@ img{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	/*align-items: ;*/
+
 }
 .navigation-item{
 	margin-right: 45px;
@@ -193,10 +191,12 @@ img{
 
 /*подчеркивание активного пункта меню*/
 .selected{
-	padding-bottom: 13px;
 	border-bottom: solid 2px var(--basic-red);
 }
 
+.site-item .selected{
+	padding-bottom: 13px;
+}
 
 /*Container*/
 .container{
@@ -212,7 +212,7 @@ img{
 }
 
 .features-list{	
-	
+
 	width: 1160px;
 	margin: 0 auto;
 }
@@ -259,13 +259,15 @@ img{
 }
 
 .slide-current{
-  display: block;
+  	display: block;
 }
 
 .slider-controls{
 	position: absolute;
-	bottom: 96px;
-	left: 796px;
+	bottom: 88px;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
 	z-index: 20;
 	display: flex;
 	width: 88px;
@@ -584,7 +586,7 @@ img{
 	background-color: var(--basic-grey);
 	padding-top: 77px;
 	padding-bottom: 108px;
-	margin-bottom: 55px;
+	margin-bottom: 54px;
 }
 
 .page-catalog{
@@ -817,7 +819,7 @@ img{
 	display: flex;
 	justify-content: space-between; 
 	width: 272px;
-	margin-left: 208px;
+	margin-left: 235px;
 }
 
 .sorting-item{
@@ -828,6 +830,9 @@ img{
 	text-transform: uppercase;
 }
 
+
+}
+
 .sorting-item:hover{
 	opacity: .6;
 }
@@ -836,20 +841,28 @@ img{
 }
 
 .sorting-button{
-	margin: 0;
-	padding: 0;
 	opacity: .2;
-	height: 10px;
+	height: 11px;
 	width: 11px;
-	background-image: url();
+	margin-left: 15px;
 }
-.sorting-button:hover{
+
+.sorting-button:hover,
+.sorting-button:focus{
 	opacity: 1;
 }
-/* как заменить цвет треугольника при нажатии на него.
-	 или заменить сам файл картинки*/
+.sorting-button:active path{
+	fill: var(--basic-grey-sort);
+}
 
+.sort-active{
+	opacity: 1;
+}
 
+.sort-active path{
+	fill: var(--basic-grey-sort);
+	opacity: 1;
+}
 /* каталог шаблонов */
 
 .catalog-list{
@@ -1000,16 +1013,17 @@ img{
 	text-align: center;
 }
 .pagination-item a{
-	display: block;
+	display: inline-block;
+	/*vertical-align: center;*/
 	line-height: 45px;
 	text-align: center;
+	border-radius: 3px;
 	/*padding: 17px 20px 15px;*/
 }
 .pagination-item:last-child {
 	margin-right: 0;
 	display: block;
 	text-align: center;
-	/*padding: 17px 20px 15px;*/
 }
 
 .pagination-item:last-child {
@@ -1030,7 +1044,6 @@ img{
 	border-radius: 3px;
 	box-sizing: border-box;
 	border: 3px solid var(--basic-dark-grey);
-	/*padding: 14px 17px 12px;*/
 	width: 50px;
 	height: 50px;
 	line-height: 45px;
@@ -1243,6 +1256,19 @@ img{
 	border-color: var(--basic-black);
 	outline: none;
 	color: var(--basic-black);
+}
+
+.order-item input:focus::-moz-placeholder{
+	color: var(--basic-black);
+}
+.order-item input:focus::-webkit-input-placeholder{
+	color: var(--basic-black); 
+}
+.order-item textarea:focus::-moz-placeholder{
+	color: var(--basic-black);
+}
+.order-item textarea:focus::-webkit-input-placeholder{
+	color: var(--basic-black); 
 }
 
 .order-text{
