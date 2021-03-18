@@ -156,7 +156,7 @@
 						<div class="contacts-address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br><br>
 							<a class="contacts-phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
 						</div>
-						<a class="button" href="blank.html">Напишите нам</a>
+						<a class="button order-link" href="blank.html">Напишите нам</a>
 					</div>
 
 					<img class="contacts-marker" src="img/map-marker.png" width="231" height="190" alt="указатель на карте">
@@ -193,12 +193,12 @@
 		</section>
 	</footer>
 
-	<section class="modal hide">
+	<section class=" modal modal-order">
 		<h2 class="modal-title">Напишите нам</h2>
 		<div class="modal-wrapper">
-		<form class="order" action="https://echo.htmlacademy.ru" method="post">
+		<form class="order-form" action="https://echo.htmlacademy.ru" method="post" >
 			<p class="order-item">
-      			<label class="order-login" for="name-id">Ваше имя:</label>
+      			<label class="order-name" for="name-id">Ваше имя:</label>
       			<input id="name-id" type="text" name="name" placeholder="Имя Фамилия" >
       		</p>
       		<p class="order-item">
@@ -217,5 +217,7 @@
 		</div>
 	</section>
 
+
+<script src="js/order.js"></script>
 </body>
 </html>
