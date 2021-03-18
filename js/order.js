@@ -33,24 +33,43 @@ orderClose.addEventListener("click", function (evt) {
 	orderPopup.classList.remove("modal-error");
 });
 
+// orderForm.addEventListener("submit", function (evt) {
+// 	if (!orderName.value || !orderEmail.value || !orderText.value) {
+// 		evt.preventDefault();
+// 		orderPopup.classList.remove("modal-error");
+// 		orderPopup.offsetWidth = orderPopup.offsetWidth;
+// 		orderPopup.classList.add("modal-error");
+// 	} 
+// 	else {
+// 		if (isStorageSupport) {
+// 		localStorage.setItem("name", orderName.value);
+// 		localStorage.setItem("email", orderEmail.value);
+// 		}
+// 	}
+// });
+ 
 orderForm.addEventListener("submit", function (evt) {
-	if (!orderName.value || !orderEmail.value) {
-    evt.preventDefault();
-    orderPopup.classList.add("modal-error");
-    loginPopup.offsetWidth = loginPopup.offsetWidth;
-    loginPopup.classList.add("modal-error");
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem("name", orderName.value);
-    }
-  }
+	if (orderName.value && orderEmail.value && orderText.value) {
+		if (isStorageSupport) {
+		localStorage.setItem("name", orderName.value);
+		localStorage.setItem("email", orderEmail.value);
+		}
+	} 
+	else {
+		evt.preventDefault();
+		orderPopup.classList.remove("modal-error");
+		orderPopup.offsetWidth = orderPopup.offsetWidth;
+		orderPopup.classList.add("modal-error");
+	}
 });
+  
+
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (loginPopup.classList.contains("modal-show")) {
+    if (orderPopup.classList.contains("modal-show")) {
       evt.preventDefault();
-      loginPopup.classList.remove("modal-show");
+      orderPopup.classList.remove("modal-show");
       orderPopup.classList.remove("modal-error");
     }
   }
