@@ -67,10 +67,7 @@
 	font-size: 16px;
 	line-height: 24px;
 	color: var(--basic-text);
-
-
 	min-height: 100%;
-
 	display: grid;
 	grid-template-rows: min-content 1fr min-content;
 	align-content: start;
@@ -98,7 +95,7 @@ img{
   	clip-path: inset(100%);
   	clip: rect(0 0 0 0);
  	overflow: hidden;
-}
+ }
 
 
 /*Grid*/
@@ -119,12 +116,10 @@ img{
 	font-weight: 500;
 	text-transform: uppercase;
 	color: var(--basic-black);
-	background-color: var(--basic-grey);
-	
+	background-color: var(--basic-grey);	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
 	padding-top: 50px;
 }  
 
@@ -165,6 +160,7 @@ img{
 	height: 50px;
 	line-height: 50px;
 	display: inline-block;
+	vertical-align: middle;
 }
 
 .site-navigation , .cart{
@@ -448,6 +444,7 @@ img{
 /* Button */
 .button{
 	display: inline-block;
+	vertical-align: middle;
 	color: var(--basic-white);
 	background-color: var(--basic-red);
 	font-size: 16px;
@@ -725,11 +722,6 @@ img{
 	opacity: 1;
 }
 
-.filters{
-	/*width: 208px;*/
-}
-
-
 .filter li{
 	margin-bottom: 20px;
 }
@@ -944,7 +936,7 @@ input:focus + label{
 /*	margin-bottom: -10px;*/
 	overflow: auto;
 	width: 255px;
-	margin: 0 auto -12px;
+	margin: 0 auto -10px;
 	font-size: 16px;
 	line-height: 18px;
 	color: var(--basic-address);
@@ -978,7 +970,6 @@ input:focus + label{
 	box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
 }
 
-
 .catalog-img-top {
 	opacity: .3
 }
@@ -986,7 +977,6 @@ input:focus + label{
 .catalog-item-info {
 	opacity: 0
 }
-
 
 .catalog-item:hover .catalog-img-top,
 .catalog-item:hover .catalog-item-info {
@@ -1081,7 +1071,6 @@ input:focus + label{
 	margin-left: 100px;
 }
 
-
 /*блок с адресом*/
 .contacts{
 	width: 320px;
@@ -1105,7 +1094,7 @@ input:focus + label{
 .contacts-address{
 	color: var(--basic-address);
 	line-height: 18px;
-	padding: 0px 0 38px 50px;
+	padding: 0px 0 36px 50px;
 }
 .contacts-phone{
 	color: var(--basic-address);
@@ -1158,10 +1147,6 @@ input:focus + label{
 	opacity: 0.3;
 }
 /*давайте дружить*/
-
-.footer-referal{
- 	
-}
 
 .referal-title{
 	font-family: "Roboto-Bold", Arial, sans-serif;
