@@ -57,9 +57,8 @@
 
   --basic-border-modal: #D7DCDE;
   --basic-border-modal-click: #B4B9BB;
-;
-;
 }
+
 /* Global */
 
 .main-body{
@@ -135,6 +134,13 @@ img{
 	opacity: .3;
 }
 
+.main-header-logo-current img:hover,
+.main-header-logo-current img:focus,
+.main-header-logo-current img:active{
+	opacity: 1;
+}
+
+
 .main-navigation-wrapper{	
 	background-color: var(--basic-grey); 
   	width: 1160px;
@@ -192,6 +198,13 @@ img{
 	border-bottom: solid 2px var(--basic-red);
 }
 
+.active , .site-navigation a:hover,
+.active , .site-navigation a:focus,
+.active , .site-navigation a:active{
+	color: var(--basic-black);
+	opacity: 1;
+}
+
 
 /*Container*/
 .container{
@@ -230,7 +243,12 @@ img{
 	position: absolute;
 	top: 225px;	
 	line-height: 24px;
+
+	width: 416px;
+	height: 50px;
+	overflow: scroll;
 }
+
 .features-slogan{
 	color: var(--basic-black);
 	font-weight: 500;
@@ -283,9 +301,9 @@ img{
 
 /* Services */
 .services{
-	 padding-bottom: 80px;
-	 margin-top: 80px;
-	 border-bottom: solid 2px var(--basic-grey);
+	padding-bottom: 80px;
+	margin-top: 80px;
+	border-bottom: solid 2px var(--basic-grey);
 }
 
 .services-list{
@@ -517,8 +535,8 @@ img{
 /* Partners */
 .partners{
 	margin-top: 40px;
-	height: 140px;
-	/*padding-bottom: 50px;*/
+	/*height: 140px;*/
+	padding-bottom: 50px;
 	border-bottom: solid 2px var(--basic-grey);
 }
 
@@ -527,6 +545,7 @@ img{
 	/*grid-template-columns: 1fr 1fr 1fr 1fr;*/
 	grid-template-columns: 280px 300px 300px 280px;
 	position: relative;
+
 }
 
 .partners-item{
@@ -534,6 +553,7 @@ img{
   	align-items: center;
   	justify-content: space-around;
 	position: relative;
+	flex-wrap: wrap;
 } 
 
 
@@ -766,6 +786,10 @@ input:focus + label{
 	background-position: 0 0;
 }
 
+.property-item .property-item-input:disabled + label::before{
+	opacity: .1;	
+}
+
 /* РАДИОБАТОН СЕТКА */
 .grid-item{
 	position: relative;
@@ -773,6 +797,7 @@ input:focus + label{
 	cursor: pointer;
 	user-select: none;
 }
+
 
 .grid-item-input  + label::before {
 	content: "";
@@ -797,6 +822,12 @@ input:focus + label{
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
+
+
+.grid-item .grid-item-input:disabled + label::before{
+	opacity: .1;
+}
+
 
 /* СОРТИРОВКА */
 .sorting{
@@ -921,6 +952,9 @@ input:focus + label{
 	color: var(--basic-black);
 	margin-top: 25px;
 	margin-bottom: 12px;
+
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 .catalog-item-name:hover{
@@ -1053,6 +1087,7 @@ input:focus + label{
 	margin-bottom: 0;
 	margin-top: 80px
 }
+
 .map-widget{
 	width: 100%;
 	height: 416px;
@@ -1095,14 +1130,23 @@ input:focus + label{
 	color: var(--basic-address);
 	line-height: 18px;
 	padding: 0px 0 36px 50px;
+	overflow: scroll;
+	display: block;
+	height: 72px;
 }
+
 .contacts-phone{
 	color: var(--basic-address);
 	line-height: 18px;
 }
 .contacts .button{
 	width: 160px;
-	margin: 0 50px;
+	position: absolute;
+	bottom: 47px;
+	left: 50px;
+
+	/*margin: 0 50px;*/
+	/*margin-bottom: 50px;*/
 }
 
 /* Socials */
@@ -1139,7 +1183,7 @@ input:focus + label{
 }
 
 .social-item:active{
-	background: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+	background: linear-gradient(0deg, var(--basic-red-click), var(--basic-red-click) ), var(--basic-white);
 	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
